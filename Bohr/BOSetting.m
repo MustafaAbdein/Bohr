@@ -35,7 +35,7 @@
 }
 
 - (void)setValue:(id)value {
-	if (self.value != value) {
+	if (self.value != value && self.key) {
 		[[NSUserDefaults standardUserDefaults] setObject:value forKey:self.key];
 	}
 }
