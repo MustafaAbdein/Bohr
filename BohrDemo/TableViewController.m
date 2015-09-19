@@ -65,6 +65,8 @@
 			cell.actionBlock = ^{
 				[weakSelf showTappedButtonAlert];
 			};
+            
+    
 		}]];
 		
 		section.footerTitle = @"Static footer title";
