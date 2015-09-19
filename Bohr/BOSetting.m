@@ -31,7 +31,7 @@
 }
 
 - (id)value {
-	return [[NSUserDefaults standardUserDefaults] objectForKey:self.key];
+	return (self.key) ? [[NSUserDefaults standardUserDefaults] objectForKey:self.key] : nil;
 }
 
 - (void)setValue:(id)value {
