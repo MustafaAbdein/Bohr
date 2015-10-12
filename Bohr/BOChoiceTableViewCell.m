@@ -39,7 +39,11 @@
 }
 
 - (void)settingValueDidChange {
-	self.detailTextLabel.text = self.options[[self.setting.value integerValue]];
+    NSInteger option =[self.setting.value integerValue];
+    if (option>=self.options.count) {
+        return;
+    }
+    self.detailTextLabel.text = self.options[option];
 }
 
 @end

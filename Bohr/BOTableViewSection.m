@@ -24,7 +24,7 @@
 	if (self = [super init]) {
 		self.cells = [NSArray new];
 		// Workaround to UITableViewHeaderFooterView's default 0-sized font driving iOS 9 nuts (yeah, WTF Apple).
-		self.footerTitleFont = [UIFont fontWithName:@"Helvetica" size:13];
+		self.footerTitleFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:12];
 		// I mean, really, if you...
 		// NSLog(@"%@", [UITableViewHeaderFooterView new].textLabel.font);
 		// you get "font-size: 0.00pt".
@@ -52,5 +52,6 @@
 - (void)addCell:(BOTableViewCell *)cell {
 	self.cells = [self.cells arrayByAddingObject:cell];
 }
+
 
 @end

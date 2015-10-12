@@ -29,7 +29,8 @@
 	
 	if (self.secondaryFont) {
 		self.textField.font = self.secondaryFont;
-		self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.textField.placeholder attributes:@{NSFontAttributeName : self.secondaryFont}];
+        NSString * place = (self.textField.placeholder) ? self.textField.placeholder : @"";
+		self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:place attributes:@{NSFontAttributeName : self.secondaryFont}];
 	}
 }
 
